@@ -139,85 +139,79 @@
     }
 
     // Create overlay element
-    $overlayEl = document.createElement('div');
-
-    // add classes to overlay
-    $overlayEl.classList.add('id-overlay', 'ui-backdrop', 'v-bg-black-50',
-      's-flex', 'u-flex', 'u-flex-alignitems-center',
+    $overlayEl = Utilities.createNewElement('div', ['id-overlay', 'ui-backdrop',
+      'v-bg-black-50', 's-flex', 'u-flex', 'u-flex-alignitems-center',
       'u-flex-justifycontent-spacebetween', 'u-hidden', 'v-fade',
-      'v-opacity-0', 'v-opacity-100');
+      'v-opacity-0', 'v-opacity-100']);
 
     // append overlay to body
     document.getElementsByTagName('body')[0].appendChild($overlayEl);
 
     // create previous button, add classes, add chevron, and append to overlay
-    $previousButtonEl = document.createElement('button');
-    $previousButtonEl.classList.add('id-previous-button', 'ui-round-button',
-      'v-bg-black-75', 'v-bordercolor-white', 'u-margin-left-1');
+    $previousButtonEl = Utilities.createNewElement('button',
+      ['id-previous-button', 'ui-round-button', 'v-bg-black-75',
+        'v-bordercolor-white', 'u-margin-left-1']);
     $previousButtonEl.innerHTML =
       '<i class="fa fa-angle-left fa-2x v-font-white"></i>';
     $overlayEl.appendChild($previousButtonEl);
 
     // create loading spinner, add classes, and append to overlay
-    $spinnerEl = document.createElement('span');
-    $spinnerEl.classList.add('fa', 'fa-refresh', 'fa-spin', 'fa-2x',
-      'v-font-lightgray');
+    $spinnerEl = Utilities.createNewElement('span', ['fa', 'fa-refresh',
+      'fa-spin', 'fa-2x', 'v-font-lightgray']);
     $overlayEl.appendChild($spinnerEl);
 
     // create a container for the image, caption, and close button
     // add classes and append container to overlay
-    $imageContainerEl = document.createElement('div');
-    $imageContainerEl.classList.add('id-image-container',
-      'u-position-relative', 'v-fade', 'u-hidden', 'v-opacity-100');
+    $imageContainerEl = Utilities.createNewElement('div',['id-image-container',
+      'u-position-relative', 'v-fade', 'u-hidden', 'v-opacity-100']);
     $imageContainerEl.innerHTML = '';
     $overlayEl.appendChild($imageContainerEl);
 
     // create image element, add classes, and append to image container
-    $imageEl = new Image();
-    $imageEl.classList.add('u-display-block');
+    $imageEl = Utilities.createNewElement('img', ['u-display-block']);
     $imageContainerEl.appendChild($imageEl);
 
     // create caption element, add classes, and append to image container
-    $captionEl = document.createElement('div');
-    $captionEl.classList.add('v-bg-black', 'v-font-white', 'u-height-4',
-      'u-position-relative', 's-flex', 'u-flex-alignitems-center');
+    $captionEl = Utilities.createNewElement('div', ['v-bg-black',
+      'v-font-white', 'u-height-4', 'u-position-relative', 's-flex',
+      'u-flex-alignitems-center']);
     $imageContainerEl.appendChild($captionEl);
 
     // create actions container and actions
-    $imageActionsEl = document.createElement('div');
-    $imageActionsEl.classList.add('u-margin-left-auto', 'u-margin-right-1');
-    $imageLinkOutEl = document.createElement('a');
-    $imageLinkOutEl.classList.add('v-font-white');
-    $imageLinkOutEl.setAttribute('target', '_blank');
+    $imageActionsEl = Utilities.createNewElement('div', ['u-margin-left-auto',
+      'u-margin-right-1']);
+    $imageLinkOutEl = Utilities.createNewElement('a', ['v-font-white'],
+      [['target', '_blank']]);
+    //$imageLinkOutEl.setAttribute('target', '_blank');
     $imageLinkOutEl.innerHTML = linkoutIcon;
 
     $imageActionsEl.appendChild($imageLinkOutEl);
 
     // if direct download is supported, add an extra download link
     if(isDownloadAttrSupported) {
-      $imageDownloadEl = document.createElement('a');
-      $imageDownloadEl.classList.add('v-font-white', 'u-margin-left-1');
-      $imageDownloadEl.setAttribute('download', true);
+      $imageDownloadEl = Utilities.createNewElement('a', ['v-font-white',
+        'u-margin-left-1'], [['download', true]]);
       $imageDownloadEl.innerHTML = downloadIcon;
 
       $imageActionsEl.appendChild($imageDownloadEl);
     }
 
     // create next button, add classes, add chevron, and append to overlay
-    $nextButtonEl = document.createElement('button');
-    $nextButtonEl.classList.add('id-next-button', 'ui-round-button',
-      'v-bg-black-75', 'v-bordercolor-white', 'u-margin-right-1');
+    $nextButtonEl = Utilities.createNewElement('button', ['id-next-button',
+      'ui-round-button', 'v-bg-black-75', 'v-bordercolor-white',
+      'u-margin-right-1']);
     $nextButtonEl.innerHTML =
       '<i class="fa fa-angle-right fa-2x v-font-white"></i>';
     $overlayEl.appendChild($nextButtonEl);
 
     // create close button, add classes, and append to image container
-    $closeButtonEl = document.createElement('button');
-    $closeButtonEl.classList.add('id-close-button', 'ui-round-button-small',
-      'v-bg-black-75', 'v-bordercolor-white', 'v-font-white',
-      'u-position-absolute', 'u-top-neg1', 'u-right-neg1');
+    $closeButtonEl = Utilities.createNewElement('button',
+      ['id-close-button', 'ui-round-button-small', 'v-bg-black-75',
+        'v-bordercolor-white', 'v-font-white', 'u-position-absolute',
+        'u-top-neg1', 'u-right-neg1']);
     $closeButtonEl.innerHTML = '<i class="fa fa-times fa-1x v-font-white"></i>';
     $imageContainerEl.appendChild($closeButtonEl);
+
 
     // once all elemnts are created, bind events to them
     _bindLightboxUIEvents();
