@@ -2,7 +2,7 @@
  * Thumbnail module.
  */
 
-(function (root, factory) {
+(function (root, factory, Utilities) {
 
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -13,24 +13,6 @@
   }
 
 }(this, function () {
-
-  /**
-   * bind event utility (private)
-   * @param {element} element DOM element to which to bind the event
-   * @param {event} event event to listen for
-   * @param {function} callback function to be executed on event
-   */
-  var _bind = function(element, event, callback) {
-      element.addEventListener(event, callback, false);
-  };
-
-  /**
-   * prevent default action utility (private)
-   * @param {event} event event to listen for
-   */
-  var _preventDefaultEvent = function(event) {
-    event.preventDefault();
-  };
 
   /**
    * create thumbnails from object (public)
@@ -83,7 +65,7 @@
       $targetEl.appendChild($linkEl);
 
       if(preventDefaultEvent) {
-        _bind($linkEl, 'click', _preventDefaultEvent);
+        Utilities.bind($linkEl, 'click', Utilities.preventDefaultEvent);
       }
     });
 
@@ -94,4 +76,4 @@
   return {
     paintThumbs: paintThumbs
   };
-}));
+}, Utilities));

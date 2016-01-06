@@ -2,7 +2,7 @@
  * Lightbox module.
  */
 
-(function (root, factory) {
+(function (root, factory, Utilities) {
 
   if (typeof define === 'function' && define.amd) {
     define(factory);
@@ -38,26 +38,6 @@
     downloadIcon = '<i class="fa fa-cloud-download v-text-2"></i>',
     isDownloadAttrSupported =
       (navigator.userAgent.toLowerCase().indexOf('chrome') > -1);
-
-  /**
-   * bind event utility (private)
-   * @param {element} element DOM element to which to bind the event
-   * @param {event} event event to listen for
-   * @param {function} callback function to be executed on event
-   */
-  var _bind = function(element, event, callback) {
-    element.addEventListener(event, callback, false);
-  };
-
-  /**
-   * unbind event utility (private)
-   * @param {element} element DOM element from which to unbind the event
-   * @param {event} event event to listen for
-   * @param {function} callback function to be executed on event
-   */
-  var _unbind = function(element, event, callback) {
-    element.removeEventListener(event, callback, false);
-  };
 
   /**
    * event handler for previous button (private)
@@ -109,7 +89,7 @@
 
     // bind an event handler to each thumb so it spawns the lightbox
     [].forEach.call(thumbs, function(thumb, thumbIndex) {
-      _bind(thumb, 'click', function(){_thumbsEventHandler(thumbIndex)});
+      Utilities.bind(thumb, 'click', function(){_thumbsEventHandler(thumbIndex)});
     });
   };
 
@@ -118,11 +98,14 @@
    * buttons and close button (private)
    */
   var _bindLightboxUIEvents = function() {
-    _bind($previousButtonEl, 'click', _previousButtonEventHandler);
-    _bind($nextButtonEl, 'click', _nextButtonEventHandler);
-    _bind($closeButtonEl, 'click', _closeButtonEventHandler);
+    Utilities.bind($previousButtonEl, 'click', _previousButtonEventHandler);
+    Utilities.bind($nextButtonEl, 'click', _nextButtonEventHandler);
+    Utilities.bind($closeButtonEl, 'click', _closeButtonEventHandler);
   };
 
+  /**
+   * bind events for keyboard interaction
+   */
   var keyboardEventHandler = function(event) {
     switch(event.keyCode) {
       // Esc
@@ -280,7 +263,7 @@
     _loadImage(currentImageIndex);
 
     // bind keyboard events
-    _bind(document, 'keydown', keyboardEventHandler);
+    Utilities.bind(document, 'keydown', keyboardEventHandler);
 
     // unhide the overlay
     $overlayEl.classList.remove('u-hidden');
@@ -464,7 +447,7 @@
     currentImageIndex = 0;
 
     // remove keyboard event handlers when lightbox closes for tidiness
-    _unbind(document, 'keydown', keyboardEventHandler);
+    Utilities.unbind(document, 'keydown', keyboardEventHandler);
 
     // add opacity class so lightbox fades
     $overlayEl.classList.add('v-opacity-0');
@@ -483,4 +466,4 @@
     showNextImage: showNextImage,
     closeLightbox: closeLightbox
   };
-}));
+}, Utilities));
