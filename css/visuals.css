@@ -1,0 +1,276 @@
+/**
+ * visuals.css
+ *
+ * this file contains styles for all visual styling (e.g. fonts, colors,
+ * borders, shadows, etc.)
+ */
+
+
+/* ==========================================================================
+   Fonts & line-height
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic,900,900italic');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* font colors
+   ========================================================================== */
+
+.v-font-white {
+  color: #FFF;
+}
+
+.v-font-white-50 {
+  color: hsla(0, 0%, 100%, .5);
+}
+
+.v-font-white-20 {
+  color: hsla(0, 0%, 100%, .2);
+}
+
+.v-font-gray {
+  color: #555459;
+}
+
+.v-font-lightgray {
+  color: #CCCCCC;
+}
+
+.v-font-yellow {
+  color: #dfa941;
+}
+
+.v-font-aubergine {
+  color: #4D394B;
+}
+
+.v-font-green {
+  color: #2ab27b;
+}
+
+.v-font-blue {
+  color: #2a80b9;
+}
+
+
+/* font styling
+   ========================================================================== */
+
+.v-fontweight-light {
+  font-weight: 300;
+}
+
+.v-fontweight-normal {
+  font-weight: 400;
+}
+
+.v-fontweight-bold {
+  font-weight: 700;
+}
+
+.v-fontweight-extrabold {
+  font-weight: 900;
+}
+
+.v-font-uppercase {
+  text-transform: uppercase;
+}
+
+.v-font-italics {
+  font-style: italic;
+}
+
+/* font sizing
+   ========================================================================== */
+
+.v-text-1 {
+  font-size: 1.4rem;
+}
+
+.v-text-2 {
+  font-size: 1.125rem;
+}
+
+.v-text-3 {
+  font-size: 1rem;
+}
+
+.v-text-4 {
+  font-size: .9rem;
+}
+
+.v-text-5 {
+  font-size: .8rem;
+}
+
+/* line-heights
+   ========================================================================== */
+
+/* not totally happy with this naming because wile it follows the convention of
+   the font-sizing naming, it isn't as immediately readable */
+.v-lineheight-1 {
+  line-height: 1.5rem;
+}
+
+.v-lineheight-2 {
+  line-height: 1.25rem;
+}
+
+.v-lineheight-3 {
+  line-height: 1rem;
+}
+
+
+/* ==========================================================================
+   Backgrounds
+   ========================================================================== */
+
+/*
+   background colors
+   ========================================================================== */
+
+.v-bg-white {
+  background-color: #FFF;
+}
+
+.v-bg-darkgray {
+  background-color: #333;
+}
+
+.v-bg-black {
+  background-color: #000;
+}
+
+.v-bg-black-50 {
+  background-color: hsla(0, 0%, 0%, .5);
+}
+
+.v-bg-black-75 {
+  background-color: hsla(0, 0%, 0%, .75);
+}
+
+.v-bg-aubergine {
+  background-color: #4D394B;
+}
+
+.v-bg-green {
+  background-color: #2ab27b;
+}
+
+/*
+   background attributes
+   ========================================================================== */
+
+.u-bgsize-cover {
+  background-size: cover;
+}
+
+.u-bgposition-center {
+  background-position: center;
+}
+
+.u-bgrepeat-none {
+  background-repeat: no-repeat;
+}
+
+/* ==========================================================================
+   Borders
+   ========================================================================== */
+
+.v-border-1 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #CCC;
+}
+
+.v-border-1-top {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #CCC;
+}
+
+.v-bordercolor-white {
+  border-color: #FFF;
+}
+
+.v-bordercolor-lightgray {
+  border-color: #E8E8E8;
+}
+
+.v-borderradius-quarter {
+  border-radius: .25rem;
+}
+
+.v-borderradius-half {
+  border-radius: .5rem;
+}
+
+.v-borderradius-1 {
+  border-radius: 1rem;
+}
+
+.v-borderwidth-1 {
+  border-width: 1px;
+}
+
+/* ==========================================================================
+   List styling
+   ========================================================================== */
+
+.v-list-bulletless {
+  list-style: none;
+}
+
+/* ==========================================================================
+   Shadows
+   ========================================================================== */
+
+.v-boxshadow-inset-1 {
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+}
+
+/* ==========================================================================
+   Opacity
+   ========================================================================== */
+
+.v-opacity-100 {
+  opacity: 1;
+}
+
+.v-opacity-50 {
+  opacity: .5;
+}
+
+.v-opacity-25 {
+  opacity: .25;
+}
+
+.v-opacity-0 {
+opacity: 0;
+}
+
+/* ==========================================================================
+   Cursors
+   ========================================================================== */
+
+.v-cursor-pointer {
+  cursor: pointer;
+}
+
+.v-cursor-arrow {
+  cursor: default;
+}
+
+/* ==========================================================================
+   Transitions
+   ========================================================================== */
+
+.v-fade {
+  transition-property: opacity;
+  transition-duration: .25s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}

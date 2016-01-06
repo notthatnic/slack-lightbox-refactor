@@ -1,0 +1,38 @@
+/**
+ * structure.css
+ *
+ * This file contains styles for defining page structure (e.g. grids, cols,
+ * rows)
+ * Note: 1 "sizing unit" = 1 rem = 16px
+ **/
+
+/* ==========================================================================
+   Grid and columns
+   ========================================================================== */
+
+.s-flex {
+  display: flex;
+}
+
+.s-flex-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+}
+
+.s-column-fluid {
+  flex: 1;
+}
+
+.s-column-220 {
+  flex: 0 0 220px;
+}
+
+.s-column-415 {
+  flex: 0 0 415px;
+}
+
+.s-full-height {
+  height: 100%;
+}

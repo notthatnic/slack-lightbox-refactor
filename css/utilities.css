@@ -1,0 +1,240 @@
+/**
+ * utilities.css
+ *
+ * styles for all single-purpose, reusable utility classes (e.g. margins,
+ * borders, positioning, etc.)
+ **/
+
+/* ==========================================================================
+   Display
+   ========================================================================== */
+
+.u-hidden {
+  display: none;
+}
+
+.u-display-block {
+  display: block;
+}
+
+.u-display-inlineblock {
+  display: inline-block;
+}
+/* ==========================================================================
+   Positioning
+   ========================================================================== */
+
+.u-position-absolute {
+  position: absolute;
+}
+
+.u-position-relative {
+  position: relative;
+}
+
+.u-top-neg1 {
+  top: -1rem;
+}
+
+.u-right-neg1 {
+  right: -1rem;
+}
+/* ==========================================================================
+   Floating & clearing
+   not used, left in as an example
+   ========================================================================== */
+
+.u-float-right {
+  float: right;
+}
+
+.u-float-left {
+  float: left;
+}
+
+.u-clear-both {
+  clear: both;
+}
+
+.u-clear-right {
+  clear: right;
+}
+
+.u-clear-left {
+  clear: left;
+}
+
+/* ==========================================================================
+   Margins
+   ========================================================================== */
+
+.u-margin-top-1 {
+  margin-top: 1rem;
+}
+
+.u-margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.u-margin-left-1 {
+  margin-left: 1rem;
+}
+
+.u-margin-right-1 {
+  margin-right: 1rem;
+}
+
+.u-margin-top-2 {
+  margin-top: 2rem;
+}
+
+.u-margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+
+.u-margin-auto {
+  margin: 0 auto;
+}
+
+.u-margin-left-auto {
+  margin-left: auto;
+}
+
+
+.u-margin-left-half {
+  margin-left: .5rem;
+}
+
+.u-margin-right-half {
+  margin-right: .5rem;
+}
+
+.u-margin-top-nudge {
+  margin-top: .2rem;
+}
+
+.u-margin-left-nudge {
+  margin-left: .2rem;
+}
+
+.u-margin-right-nudge {
+  margin-right: .2rem;
+}
+
+.u-margin-0 {
+  margin: 0;
+}
+
+.u-margin-top-0 {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   Padding
+   ========================================================================== */
+
+.u-padding-1 {
+  padding: 1rem 1rem;
+}
+
+.u-padding-top-1 {
+  padding-top: 1rem;
+}
+
+.u-padding-bottom-1 {
+  padding-bottom: 1rem;
+}
+
+.u-padding-left-1 {
+  padding-left: 1rem;
+}
+
+.u-padding-right-1 {
+  padding-right: 1rem;
+}
+
+.u-padding-right-2 {
+  padding-right: 2rem;
+}
+
+.u-padding-left-2 {
+  padding-left: 2rem;
+}
+
+.u-padding-top-half {
+  padding-top: .5rem;
+}
+
+.u-padding-bottom-half {
+  padding-bottom: .5rem;
+}
+
+.u-padding-left-half {
+  padding-left: .5rem;
+}
+
+.u-padding-right-half {
+  padding-right: .5rem;
+}
+
+.u-padding-left-0 {
+  padding-left: 0;
+}
+
+/* ==========================================================================
+   Flexbox utilities
+   ========================================================================== */
+
+.u-flex-alignitems-center {
+  align-items: center;
+}
+
+.u-flex-justifycontent-spacebetween {
+  justify-content: space-between;
+}
+
+.u-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.u-flexgrow-1 {
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   Sizing
+   ========================================================================== */
+
+.u-maxwidth-75 {
+  max-width: 75%;
+}
+
+.u-width-100 {
+  width: 100%;
+}
+
+.u-height-1 {
+  height: 1rem;
+}
+
+.u-height-4 {
+  height: 4rem;
+}
+
+.u-height-100noheader {
+  height: calc(100% - 3.5rem);
+}
+
+.u-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   Overflow
+   ========================================================================== */
+
+.u-overflowy-scroll {
+  overflow-y: scroll;
+}

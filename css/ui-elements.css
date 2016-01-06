@@ -1,0 +1,91 @@
+/**
+ * ui-elements.css
+ *
+ * styles for reusable, single-purpose UI components built out in CSS
+ **/
+
+/* ==========================================================================
+   Backdrop
+   full height and width UI cover
+   ========================================================================== */
+
+.ui-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
+
+/* ==========================================================================
+   Squarish buttons
+   ========================================================================== */
+
+.ui-button {
+  border-radius: .25rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+  border: none;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  padding: .5rem 1rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Round buttons
+   ========================================================================== */
+
+.ui-round-button,
+.ui-round-button-small {
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  cursor: pointer;
+  outline: 0;
+}
+.ui-round-button {
+  height: 3rem;
+  width: 3rem;
+}
+
+
+.ui-round-button-small {
+  height: 2rem;
+  width: 2rem;
+}
+
+.ui-round-button:disabled,
+.ui-round-button-small:disabled {
+  cursor: default;
+}
+
+/* ==========================================================================
+   scrollbar backing
+   ========================================================================== */
+
+.ui-scrollbar-backing:after {
+  content: '';
+  background-color: #f3f3f3;
+  height: 100%;
+  width: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.ui-scrollbar-backing-shame:before {
+  content: '';
+  background-color: #f3f3f3;
+  height: 100%;
+  width: 8px;
+  position: absolute;
+  left: -9px;
+  top: 0;
+  border-radius: 8px;
+  z-index: -1;
+}

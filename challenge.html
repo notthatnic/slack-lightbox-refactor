@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Slack | Lightbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- fontawesome, god help me -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- custom stylesheets -->
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/structure.css">
+  <link rel="stylesheet" href="css/ui-elements.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/visuals.css">
+</head>
+<body class="challenge s-flex-container">
+  <header class="s-flex u-flex-alignitems-center v-lineheight-1">
+    <div class="s-column-220 v-bg-aubergine v-font-white
+    u-padding-1">
+      <h2 class="v-text-2 v-fontweight-bold">myGloriousTeam</h2>
+    </div>
+    <div class="s-column-fluid u-padding-1 s-flex u-flex-alignitems-center">
+      <h1 class="v-text-1">#fun-channel</h1>
+      <i class="fa fa-angle-down u-margin-top-nudge u-margin-left-half"></i>
+      <i class="fa fa-user u-margin-left-auto"></i>
+      <span class="u-display-inlineblock v-text-5 u-margin-left-nudge
+        u-margin-right-1">14</span>
+    </div>
+    <div class="s-column-415 u-padding-left-0 u-padding-right-1
+      s-flex u-flex-alignitems-center">
+      <form class="u-flexgrow-1">
+        <input type="text" placeholder="Search" class="v-text-3
+          v-border-1 v-borderradius-1 u-padding-top-half
+          u-padding-bottom-half u-padding-right-half u-padding-left-half
+           u-width-100" />
+      </form>
+      <i class="fa fa-at u-margin-left-half v-text-1"></i>
+      <i class="fa fa-star-o u-margin-left-half v-text-1"></i>
+      <i class="fa fa-ellipsis-h u-margin-left-half v-text-1"></i>
+    </div>
+  </header>
+  <section class="s-flex s-full-height">
+    <div class="s-column-220 v-bg-aubergine v-font-white-50
+    v-fontweight-light u-padding-1">
+      <h3 class="v-font-uppercase v-text-5 v-lineheight-1 v-fontweight-normal">
+        Channels
+      </h3>
+      <ul class="v-text-3 v-list-bulletless v-lineheight-1">
+        <li>
+          <span class="v-font-white-20 u-margin-right-nudge">#</span>
+          fun-channel
+        </li>
+        <li>
+          <span class="v-font-white-20 u-margin-right-nudge">#</span>
+          less-fun-channel
+        </li>
+        <li>
+          <span class="v-font-white-20 u-margin-right-nudge">#</span>
+          this-channel
+        </li>
+        <li>
+          <span class="v-font-white-20 u-margin-right-nudge">#</span>
+          boring-channel
+        </li>
+      </ul>
+      <p class="u-margin-top-2">
+        <a href="index.html" class="ui-button v-bg-green v-font-white">
+          Back to intro page
+        </a>
+      </p>
+    </div>
+    <div class="s-column-fluid u-padding-1 u-position-relative
+    ui-scrollbar-backing">
+      Imagine witty banter here...
+    </div>
+    <aside class="s-column-415 u-padding-1">
+      <header class="v-text-1 u-margin-bottom-1 v-font-gray">
+        About <span class="v-fontweight-bold">#this-channel</span>
+      </header>
+      <section class="v-border-1-top v-bordercolor-lightgray u-padding-top-1
+        u-padding-bottom-1 u-padding-right-half u-padding-left-half">
+        <header class="s-flex u-flex-alignitems-center">
+          <span class="u-margin-right-half">
+            <i class="fa fa-info v-text-3 v-font-blue"></i>
+          </span>
+          <h4 class="v-text-2 v-lineheight-1 v-fontweight-normal v-font-gray">
+            Channel details
+          </h4>
+          <span class="u-margin-left-auto">
+            <i class="fa fa-caret-right v-font-gray"></i>
+          </span>
+        </header>
+      </section>
+
+      <section class="v-border-1-top v-bordercolor-lightgray u-padding-top-1
+        u-padding-bottom-1 u-padding-right-half u-padding-left-half">
+        <header class="s-flex u-margin-bottom-1 u-flex-alignitems-center">
+          <span class="u-margin-right-half">
+            <i class="fa fa-camera v-text-3 v-font-yellow"></i>
+          </span>
+          <h4 class="v-text-2 v-lineheight-1 v-fontweight-normal v-font-gray">
+            Images
+          </h4>
+          <span class="u-margin-left-auto">
+            <i class="fa fa-caret-down v-font-gray"></i>
+          </span>
+        </header>
+        <div class="s-flex u-flex-wrap">
+          <div class="id-thumbs-spinner u-margin-auto">
+            <i class="fa fa-refresh fa-spin fa-2x v-font-lightgray"></i>
+          </div>
+          <span class="id-thumbs-error u-padding-left-1"></span>
+          <div class="id-thumbs-wrapper"></div>
+        </div>
+      </section>
+
+
+    </aside>
+  </section>
+  <script src="js/thumbs.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/challenge.js"></script>
+
+</body>
+</html>
