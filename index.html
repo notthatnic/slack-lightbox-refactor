@@ -21,15 +21,14 @@
     <h2 class="v-text-2 v-fontweight-bold">SlackChallenge</h2>
   </div>
   <div class="s-column-fluid u-padding-1">
-    <h1 class="v-text-1">Lightbox</h1>
+    <h1 class="v-text-1">Lightbox - the refactoringening!</h1>
   </div>
 </header>
 <section class="s-flex u-height-100noheader">
   <div class="s-column-220 v-bg-aubergine v-font-white-50
     v-fontweight-light u-padding-1">
-    <p class="u-margin-top-0 v-lineheight-2">I know, I wrote a lot to introduce
-      my challenge. I think it's worth reading, but if you just want to get to
-      the code, you can click on the button below.</p>
+    <p class="u-margin-top-0 v-lineheight-2">TL;DR new code. Let's do this
+      thing.</p>
     <p class="u-margin-top-2">
       <a href="challenge.html" class="ui-button v-bg-green v-font-white">
         View Demo Page
@@ -39,187 +38,64 @@
   <div class="s-column-fluid u-padding-1 u-padding-right-2 u-padding-left-2
     u-position-relative v-font-gray v-text-4
     v-lineheight-2 u-overflowy-scroll">
-    <p>Hello. My name is Nicole Rosenberg, and this is my Slack code challenge
-      submission.</p>
-    <h3 class="v-text-2 u-margin-top-2">The challenge</h3>
-    <p>The description of the challenge, as I received it, is as follows:</p>
-    <blockquote class="v-font-italics u-margin-left-half">
-      <p>This exercise is meant to demonstrate:</p>
-      <ul class="u-margin-left-1">
-        <li>The ability to access to a public API and successfully retrieve data
-          from it;</li>
-        <li>The ability to display that data on a page using only native
-          JavaScript (no libraries); and</li>
-        <li>The ability to update the UI of a page without refreshing the page.
-        </li>
-      </ul>
-      <p>I'd like you to create a web page that shows a photo in a lightbox
-        view, with the ability to move to the next / previous photos and display
-        the photo title.</p>
-    </blockquote>
-    <p>Cool.</p>
-
-    <h3 class="v-text-2 u-margin-top-2">My approach</h3>
+    <h3 class="v-text-2 u-margin-top-2">Regret</h3>
+    <p class="v-fontweight-bold">/r&#477;'gret/</p>
+    <p class="v-font-italics">
+      noun - a feeling of sadness, repentance, or
+      disappointment over something that has happened or been done, especially
+      a loss or missed opportunity.
+    </p>
     <p>
-      I like having a lot of visibility into
-      the full feature development lifecycle, because I can be a better engineer
-      when I understand the fundamental goals of a feature.
+      I find the best code I write comes to me suddenly, like a slap in the
+      face, moments after I've submitted something for review. Code challenges
+      sent for evaluation, production code submitted for code review - it
+      doesn't matter. The act of clicking those send/submit buttons fills me
+      with the
+      <a href="http://www.nytimes.com/1994/05/15/magazine/on-language-shoulda-coulda-woulda.html"
+         title="HaHA! Language!" target="_blank">
+        shoulda-coulda-wouldas</a>.
+    </p>
+    <p>
+      This challenge was no exception, but experience has helped me develop a
+      two-stage coping strategy. Stage one involves eating a lot of sugar and
+      ugly-crying on my dog. Stage two is taking a crack at refactoring.
     </p>
 
     <p>
-      To that end, I decided to create some context for the development of a
-      feature that would require a lightbox. I used myself and my weirdo friends
-      as a proxy for the user population of Slack because a) we actually use the
-      product regularly, b) I have insight into our needs as users, and c) it’s
-      my challenge and I can do what I want.
-    </p>
-
-    <p>So here’s the use case:</p>
-
-    <blockquote class="v-font-italics u-margin-left-half">
-      <p>
-        Slack users (i.e. Nicole et al.) have developed a very visual
-        conversational style. As lovers of reaction gifs and infographics, their
-        Slack channels are full of each.
-      </p>
-
-      <p>
-        These users are HipChat refugees, a land where there was no Giphy
-        integration, and as such most individuals have come to rely on reaction
-        gifs pulled from across the web. These images are often shared as links,
-        but they will occasionally upload images as well.
-      </p>
-
-      <p>
-        Users have expressed a desire for an easy way to browse all images (but
-        just images) shared to a channel. They also need a way to download/get a
-        link to individual images so that they can reuse/share them.
-      </p>
-
-    </blockquote>
-
-    <p>
-      The feature should allow users to quickly scan shared images and then get
-      at their source.
-    </p>
-    <p class="v-text-4 v-fontweight-bold">My solution</p>
-    <p>
-      My solution is to create a new section in the channel
-      details that collects uploaded/linked-to images and displays their
-      thumbnails. Clicking on a thumbnail spawns a lightbox which shows the
-      image and provides a 'link out to' and, if supported, a 'download' action.
-    </p>
-
-    <p>
-      I dummied up a Slack interface (it's not 100% accurate, but hopefully
-      gives you a good enough idea), and added the new feature section. If
-      you're eager to just see it already, you can
-      <a href="challenge.html">go to the challenge demo page</a>. But you've
-      come this far, might as well keep reading.
-
-    </p>
-
-    <h3 class="v-text-2 u-margin-top-2">A note about the CSS</h3>
-    <p>
-      I decided to use an atomic/functional approach to the styles, because:
-    </p>
-    <ul class="u-margin-left-1">
-      <li>
-        it's easier to make small changes to visual components without
-        fighting inheritance and specificity
-      </li>
-      <li>it can help keep overall stylesheet file size down</li>
-      <li>it can help enforce design consistency throughout an app</li>
-    </ul>
-
-    <p>
-      Anyone seeing the proliferation of classes that comes with a functional
-      CSS approach for the first time is at an increased risk of table-flipping
-      and hair-rending. I’m not indifferent to the fact that the markup starts
-      to look a little nutso, but the performance benefits of smaller
-      stylesheets vastly outweigh any hits taken from verbose HTML.
+      So I'm going to tackle a few of the larger items I was agonizing over.
     </p>
 
     <h3 class="v-text-2 u-margin-top-2">
-      Next Steps (a.k.a. How to evolve the feature, a.k.a Stuff I didn't do)
+      What's Changed
     </h3>
 
+    <p class="v-text-4 v-fontweight-bold">New utilities module</p>
     <p>
-      Currently this feature is very much in a proof-of-concept state. The
-      following are next steps to get this to MVP.
+      Both the thumbnail and lightbox module had the exact same _bind
+      method. Not very DRY.
     </p>
 
-    <p class="v-text-4 v-fontweight-bold">Make the lightbox responsive</p>
     <p>
-      The current implementation does not respond to window resize. At a
-      minimum, the overlay should resize with window resize, but really both
-      the overlay and images should resize. Ideally, the buttons would also
-      shrink below a certain breakpoint.
+      I decided to create a separate utilities module, which could house common
+      code. I moved the _bind, _unbind, and _preventDefaultEvent methods into
+      this new module, because those all seemed like good candidates for things
+      you might want to do in several places.
     </p>
 
-    <p class="v-text-4 v-fontweight-bold">
-      Make the lightbox module more reusable
+    <p class="v-text-4 v-fontweight-bold">createNewElement Utility</p>
+
+    <p>
+      Since making new DOM elements, adding classes, and sometimes adding
+      attributes was something I was doing over and over and over in the
+      lightbox module, I decided to create a utility for that as well.
     </p>
 
-    <ul class="u-margin-left-1">
-      <li>
-        Allow developers to customize the lightbox actions (instead of
-        automatically appending the download/link actions)
-      </li>
-      <li>
-        Allow for multiple but distinct galleries to be instantiated on a single
-        page
-      </li>
-      <li>Add customizable options</li>
-    </ul>
-
-    <p class="v-text-4 v-fontweight-bold">Improve the UI</p>
-    <ul class="u-margin-left-1">
-      <li>
-        Build out a 'more images' experience. A good approach would be to use
-        a similar pattern as the current 'Shared Files' feature in Slack. At
-        a certain number of thumbnails, a 'View all images' link would be
-        provided. That link would take users to a paginated image list
-        experience.
-      </li>
-      <li>
-        Develop a better icon strategy. Right now, for time, I'm just using
-        FontAwesome.
-      </li>
-      <li>
-        Improve support for the download feature. Only Chrome currently allows
-        downloads from other origins, but you could build in a way to test if
-        a link is from the same origin and then display the download link in
-        Firefox.
-      </li>
-    </ul>
-
-    <p class="v-text-4 v-fontweight-bold">
-      Optimize the page for perceived load time
-    </p>
-    <ul class="u-margin-left-1">
-      <li>JS and CSS files should be minified and concatenated</li>
-      <li>Resources should be gzipped or otherwise compressed</li>
-      <li>Leverage some critical CSS</li>
-      <li>
-        Thumbnails could be optimized; maybe programmatically create smaller
-        versions to decrease load time?
-      </li>
-    </ul>
-
-    <p class="v-text-4 v-fontweight-bold">Improve the build process</p>
-    <ul class="u-margin-left-1">
-      <li>
-        Use a css pre/post-processor (preferably homegrown). At a minimum, it's
-        faster and safer to store things like colors in variables that get
-        re-used across the CSS.
-      </li>
-      <li>Use templating for the markup</li>
-      <li>Leverage build tools</li>
-    </ul>
-
-    <h3 class="v-text-2 u-margin-top-2">Enough talk</h3>
-    <p>Get thee to <a href="challenge.html">the challenge demo page</a>!</p>
+    <h3 class="v-text-2 u-margin-top-2">Apply money to mouth</h3>
+    <p>The user experience hasn't changed much, as most of these were "under the
+      hood" type changes, so you'lll probably want to look at the code in
+      <a href="https://github.com/notthatnic/slack-lightbox-refactor">the github
+        repo</a>. Of course, feel free to check out the new version of
+      <a href="challenge.html">the challenge demo page</a>.</p>
   </div>
   <aside class="s-column-415 u-padding-1
     ui-scrollbar-backing-shame u-position-relative">
@@ -238,20 +114,7 @@
       </header>
       <p><a href="mailto:nicrose@gmail.com">nicrose@gmail.com</a></p>
     </section>
-    <section class="v-border-1-top v-bordercolor-lightgray u-padding-top-1
-        u-padding-bottom-1 u-padding-right-half u-padding-left-half">
-      <header class="s-flex u-flex-alignitems-center">
-          <span class="u-margin-right-half v-font-blue">
-            <i class="fa fa-linkedin-square fa-1x"></i>
-          </span>
-        <h4 class="v-text-2 v-lineheight-1 v-fontweight-normal v-font-gray">
-          LinkedIn profile
-        </h4>
-      </header>
-      <p><a href="https://www.linkedin.com/in/nicolefrosenberg">
-        www.linkedin.com/in/nicolefrosenberg
-      </a></p>
-    </section>
+
     <section class="v-border-1-top v-bordercolor-lightgray u-padding-top-1
         u-padding-bottom-1 u-padding-right-half u-padding-left-half">
       <header class="s-flex u-flex-alignitems-center">
@@ -263,23 +126,29 @@
         </h4>
       </header>
       <p>
+        <a href="https://github.com/notthatnic/slack-lightbox-refactor">
+          github.com/notthatnic/slack-lightbox-refactor
+        </a>
+      </p>
+    </section>
+
+    <section class="v-border-1-top v-bordercolor-lightgray u-padding-top-1
+        u-padding-bottom-1 u-padding-right-half u-padding-left-half">
+      <header class="s-flex u-flex-alignitems-center">
+          <span class="u-margin-right-half v-font-blue">
+            <i class="fa fa-github fa-1x"></i>
+          </span>
+        <h4 class="v-text-2 v-lineheight-1 v-fontweight-normal v-font-gray">
+          Github repo for original version
+        </h4>
+      </header>
+      <p>
         <a href="https://github.com/notthatnic/slack-lightbox">
           github.com/notthatnic/slack-lightbox
         </a>
       </p>
     </section>
-    <section class="v-border-1-top v-bordercolor-lightgray u-padding-top-1
-        u-padding-bottom-1 u-padding-right-half u-padding-left-half">
-      <header class="s-flex u-flex-alignitems-center">
-          <span class="u-margin-right-half v-font-yellow">
-            <i class="fa fa-child fa-1x"></i>
-          </span>
-        <h4 class="v-text-2 v-lineheight-1 v-fontweight-normal v-font-gray">
-          Severely out-of-date portfolio
-        </h4>
-      </header>
-      <p><a href="http://nicolerosenberg.com/">nicolerosenberg.com</a></p>
-    </section>
+
 
 
   </aside>

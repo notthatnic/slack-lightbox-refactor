@@ -1,3 +1,3 @@
-#Slack Lightbox
+#Slack Lightbox Refactor
 
-Code challenge repo. Nothing to see here.
+New year, new code.

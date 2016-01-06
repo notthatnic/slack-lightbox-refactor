@@ -18,7 +18,7 @@
    * create thumbnails from object (public)
    * @param {Array} dataArray array of image data objects
    * @param {element} $targetEl DOM element that thumbs should be appended to
-   * @param {boolean} preventDefault should the event on the image's wrapping
+   * @param {boolean} preventDefaultEvent should the event on the image's wrapping
    * link be stopped?
    * @param {function} callback function to be executed once thumbs are loaded
    */
